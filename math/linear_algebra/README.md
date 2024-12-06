@@ -14,4 +14,4 @@ What is the dot product?
 What is matrix multiplication?
 What is Numpy?
 What is parallelization and why is it important?
-What is broadcasting?
+What is broadcasting?.
