@@ -4,8 +4,10 @@
 def matrix_transpose(matrix):
     """Transpose a matrix"""
 
-    new = []
+    full = []
     for i in range(len(matrix[0])):
-        for row in matrix:
-            new.append(row[i])
-    return new
+        new = []
+        for j in range(len(matrix)):
+            new.append(matrix[j][i])
+        full.append(new)
+    return full
