@@ -13,7 +13,7 @@ def add_matrices2D(mat1, mat2):
         return None
 
     full = []
-    for i in range(len(mat1[0] - 1)):
+    for i in range(len(mat1[0])):
         new = []
         for j in range(len(mat1)):
             new.append(mat1[i][j] + mat2[i][j])
