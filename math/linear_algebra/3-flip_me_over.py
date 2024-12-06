@@ -4,8 +4,6 @@
 
 def matrix_transpose(matrix):
     """Transpose a 2D matrix"""
-
-
     full = []
     for i in range(len(matrix[0])):
         new = []
