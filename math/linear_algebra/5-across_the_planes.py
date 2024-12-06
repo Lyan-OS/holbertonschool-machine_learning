@@ -8,9 +8,12 @@ def add_matrices2D(mat1, mat2):
 
     if matrix_shape(mat1) != matrix_shape(mat2):
         return None
+    
+    if not mat1 or not mat2:
+        return None
 
     full = []
-    for i in range(len(mat1[0])):
+    for i in range(len(mat1[0] - 1)):
         new = []
         for j in range(len(mat1)):
             new.append(mat1[i][j] + mat2[i][j])
