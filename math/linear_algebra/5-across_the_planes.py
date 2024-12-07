@@ -8,7 +8,7 @@ def add_matrices2D(mat1, mat2):
     if mat1 == [] or mat2 == []:
         return None
 
-    if len(mat1) != len(mat2):
+    if matrix_shape(mat1) != matrix_shape(mat2):
         return None
 
     full = []
@@ -20,3 +20,11 @@ def add_matrices2D(mat1, mat2):
     return full
 
 
+def matrix_shape(matrix):
+    """Calculates the shape of a matrix."""
+    shape = []
+
+    while isinstance(matrix, list):
+        shape.append(len(matrix))
+        matrix = matrix[0]
+    return shape
