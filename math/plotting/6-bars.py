@@ -11,19 +11,24 @@ def bars():
     plt.figure(figsize=(6.4, 4.8))
 
     people = ['Farrah', 'Fred', 'Felicia']
+
     colors = ['red', 'yellow', '#ff8000', '#ffe5b4']
     labels = ['Apples', 'Bananas', 'Oranges', 'Peaches']
 
     bottom = np.zeros(3)
+
     for i in range(4):
         plt.bar(people, fruit[i], bottom=bottom,
                 color=colors[i], label=labels[i], width=0.5)
         bottom += fruit[i]
 
     plt.ylabel('Quantity of Fruit')
-    plt.title('Number of Fruit per Person')
+
     plt.ylim(0, 80)
     plt.yticks(np.arange(0, 81, 10))
+
+    plt.title('Number of Fruit per Person')
+
     plt.legend()
 
     plt.show()
