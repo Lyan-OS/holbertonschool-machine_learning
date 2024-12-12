@@ -9,14 +9,13 @@ def bars():
     np.random.seed(5)
     fruit = np.random.randint(0, 20, (4, 3))
 
-
     people = ['Farrah', 'Fred', 'Felicia']
 
     colors = ['red', 'yellow', '#ff8000', '#ffe5b4']
     labels = ['apples', 'bananas', 'oranges', 'peaches']
 
     plt.figure(figsize=(6.4, 4.8))
-    
+
     bottom = np.zeros(3)
 
     for i in range(4):
