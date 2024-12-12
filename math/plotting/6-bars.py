@@ -13,7 +13,7 @@ def bars():
     people = ['Farrah', 'Fred', 'Felicia']
 
     colors = ['red', 'yellow', '#ff8000', '#ffe5b4']
-    labels = ['Apples', 'Bananas', 'Oranges', 'Peaches']
+    labels = ['apples', 'bananas', 'oranges', 'peaches']
 
     plt.figure(figsize=(6.4, 4.8))
     
