@@ -8,13 +8,15 @@ def bars():
     """plot a stacked bar graph"""
     np.random.seed(5)
     fruit = np.random.randint(0, 20, (4, 3))
-    plt.figure(figsize=(6.4, 4.8))
+
 
     people = ['Farrah', 'Fred', 'Felicia']
 
     colors = ['red', 'yellow', '#ff8000', '#ffe5b4']
     labels = ['Apples', 'Bananas', 'Oranges', 'Peaches']
 
+    plt.figure(figsize=(6.4, 4.8))
+    
     bottom = np.zeros(3)
 
     for i in range(4):
