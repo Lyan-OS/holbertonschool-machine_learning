@@ -20,7 +20,6 @@ def bars():
                 color=colors[i], label=labels[i], width=0.5)
         bottom += fruit[i]
 
-    plt.xlabel('People')
     plt.ylabel('Quantity of Fruit')
     plt.title('Number of Fruit per Person')
     plt.ylim(0, 80)
