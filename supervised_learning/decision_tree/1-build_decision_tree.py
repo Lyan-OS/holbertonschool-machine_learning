@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
+"""decision tree"""
 import numpy as np
 
 
 class Node:
+    """class node"""
     def __init__(self, feature=None, threshold=None,
                  left_child=None, right_child=None,
                  is_root=False, depth=0):
@@ -16,6 +18,7 @@ class Node:
         self.depth = depth
 
     def max_depth_below(self):
+        """max depth of node"""
         if self.is_leaf:
             return self.depth
         if self.left_child:
@@ -29,6 +32,7 @@ class Node:
         return max(left_depth, right_depth)
 
     def count_nodes_below(self, only_leaves=False):
+        """count nodes below"""
         if self.is_leaf:
             return 1
         if self.left_child:
@@ -47,6 +51,7 @@ class Node:
 
 
 class Leaf(Node):
+    """class leaf"""
     def __init__(self, value, depth=None):
         super().__init__()
         self.value = value
@@ -54,13 +59,16 @@ class Leaf(Node):
         self.depth = depth
 
     def max_depth_below(self):
+        """max deppth below"""
         return self.depth
 
     def count_nodes_below(self, only_leaves=False):
+        """count nodes below"""
         return 1
 
 
 class Decision_Tree():
+    """calss decision tree"""
     def __init__(self, max_depth=10, min_pop=1, seed=0,
                  split_criterion="random", root=None):
         self.rng = np.random.default_rng(seed)
@@ -76,7 +84,9 @@ class Decision_Tree():
         self.predict = None
 
     def depth(self):
+        """depth"""
         return self.root.max_depth_below()
 
     def count_nodes(self, only_leaves=False):
+        """count nodes"""
         return self.root.count_nodes_below(only_leaves=only_leaves)
