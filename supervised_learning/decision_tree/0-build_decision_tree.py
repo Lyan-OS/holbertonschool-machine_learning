@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
+"""decision tree"""
 import numpy as np
 
 
 class Node:
+    """class for node"""
     def __init__(self, feature=None, threshold=None,
                  left_child=None, right_child=None,
                  is_root=False, depth=0):
@@ -16,6 +18,7 @@ class Node:
         self.depth = depth
 
     def max_depth_below(self):
+        """calculates tree depth"""
         if self.is_leaf:
             return self.depth
         if self.left_child:
@@ -30,6 +33,7 @@ class Node:
 
 
 class Leaf(Node):
+    """leaf of decisiion tree"""
     def __init__(self, value, depth=None):
         super().__init__()
         self.value = value
@@ -41,6 +45,7 @@ class Leaf(Node):
 
 
 class Decision_Tree():
+    """dec tree"""
     def __init__(self, max_depth=10, min_pop=1, seed=0,
                  split_criterion="random", root=None):
         self.rng = np.random.default_rng(seed)
