@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
+"""decision tree"""
 import numpy as np
 
 
 class Node:
+    """class node"""
     def __init__(self, feature=None, threshold=None,
                  left_child=None, right_child=None,
                  is_root=False, depth=0):
@@ -16,6 +18,7 @@ class Node:
         self.depth = depth
 
     def max_depth_below(self):
+        """max depth below"""
         if self.is_leaf:
             return self.depth
         if self.left_child:
@@ -47,9 +50,7 @@ class Node:
 
     def __str__(self):
         """generate a string representation of the tree"""
-        node_str = f"{
-            'root' if self.is_root else 'node'} [feature={
-                self.feature}, threshold={self.threshold}]"
+        node_str = f"{'root' if self.is_root else 'node'} [feature={self.feature}, threshold={self.threshold}]"
         if self.left_child:
             left_str = left_child_add_prefix(str(self.left_child))
         else:
